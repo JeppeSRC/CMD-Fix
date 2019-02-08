@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
 	bool extend = true;
 
 	if (argc == 2) {
-		if (memcmp(argv[1], "--no-extend", 11) == 0) extend = false;
+		extend = memcmp(argv[1], "--no-extend", 11) != 0;
 	}
 
 	Fix("\\Directory\\Background\\shell", extend);
